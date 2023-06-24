@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/brdo
+    username:
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+  security:
+    user:
+      name:
+      password:
+      roles: ADMIN
+
+dummyjson:
+  comments:
+    uri: https://dummyjson.com/comments
+
