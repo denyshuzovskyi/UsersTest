@@ -27,7 +27,7 @@
             <td th:text="${user.body}"></td>
             <td th:text="${user.postId}"></td>
             <td th:text="${user.username}"></td>
-            <td th:text="${user.updatedAt}"></td>
+            <td th:text="${user.getUpdatedAtFormatted()}"></td>
         </tr>
         </tbody>
     </table>

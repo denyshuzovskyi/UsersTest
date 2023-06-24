@@ -28,6 +28,6 @@ public class UserController implements InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         CommentsDTO allComments = dummyJSONClient.getAllComments();
-        userService.transformAndSaveComments(allComments.getComments());
+        userService.transformCommentDTOsAndSaveUsers(allComments.getComments());
     }
 }

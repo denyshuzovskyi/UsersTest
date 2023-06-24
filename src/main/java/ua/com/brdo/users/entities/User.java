@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import ua.com.brdo.users.converters.LocalDateTimeStringConverter;
+import ua.com.brdo.users.utils.DateTimeStringConverters;
 
 import java.time.LocalDateTime;
 
@@ -25,4 +26,8 @@ public class User {
     @Column(name = "updatedat")
     @Convert(converter = LocalDateTimeStringConverter.class)
     private LocalDateTime updatedAt;
+
+    public String getUpdatedAtFormatted() {
+        return DateTimeStringConverters.localDateTimeToString(updatedAt);
+    }
 }
