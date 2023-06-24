@@ -16,6 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserController implements InitializingBean {
     private final DummyJSONClient dummyJSONClient;
+
     private final UserService userService;
 
     @GetMapping("/users")

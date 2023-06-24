@@ -10,7 +10,6 @@ import java.util.List;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
 public interface CommentDTOUserMapper {
-
     @Mapping(target = "username", expression = "java(ua.com.brdo.users.utils.StringUtils.trimAndCapitalizeString(commentDTO.getUser().getUsername()))")
     @Mapping(target = "updatedAt", expression = "java(java.time.LocalDateTime.now())")
     User commentDTOToUser(CommentDTO commentDTO);

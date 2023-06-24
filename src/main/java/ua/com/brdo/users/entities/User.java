@@ -19,10 +19,14 @@ import java.time.LocalDateTime;
 public class User {
     @Id
     private Integer id;
+
     private String body;
+
     @Column(name = "postid")
     private Integer postId;
+
     private String username;
+
     @Column(name = "updatedat")
     @Convert(converter = LocalDateTimeStringConverter.class)
     private LocalDateTime updatedAt;
